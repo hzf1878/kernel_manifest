@@ -42,7 +42,7 @@ jobs:
     - name: 添加KernelSU Next
       run: |
         cd kernel/kernel_platform/common
-        curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -s next
+        curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -
         
     - name: 添加SUSFS
       run: |
