@@ -1,4 +1,4 @@
-name: 构建SM8550-ace2pro内核
+name: 构建SM8550-ace2pro_t内核
 
 on:
   workflow_call:
@@ -35,7 +35,7 @@ jobs:
     - name: 拉取oneplus ace2pro内核清单
       run: |
         mkdir kernel && cd kernel
-        repo init -u https://github.com/OnePlusOSS/kernel_manifest.git -b oneplus/sm8550 -m oneplus_ace2pro_v.xml --depth=1
+        repo init -u https://github.com/hzf1878/kernel_manifest2.git -b oneplus/sm8550 -m oneplus_ace2pro_t.xml --depth=1
         repo sync -j$(nproc --all)
         sed -i 's/export REPACK_IMG=true/export REPACK_IMG=false/Ig' kernel_platform/oplus/build/oplus_setup.sh
 
